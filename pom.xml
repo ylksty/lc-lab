@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.ylkget</groupId>
+    <artifactId>ylkget</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <modules>
+        <module>lc-framework</module>
+        <module>lc-common</module>
+        <module>lc-system</module>
+        <module>lc-admin</module>
+    </modules>
+
+    <name>ylkget</name>
+    <description>管理系统</description>
+    <properties>
+        <lc.version>1.0.0</lc.version>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <!-- 依赖声明 -->
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- SpringBoot的依赖配置-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.5.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- 核心模块-->
+            <dependency>
+                <groupId>com.ylkget</groupId>
+                <artifactId>lc-framework</artifactId>
+                <version>${lc.version}</version>
+            </dependency>
+
+            <!-- 通用工具-->
+            <dependency>
+                <groupId>com.ylkget</groupId>
+                <artifactId>lc-common</artifactId>
+                <version>${lc.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+    <dependencies>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>
