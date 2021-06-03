@@ -16,10 +16,36 @@
     </description>
 
     <dependencies>
+        <!-- Mysql驱动包 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
         <!-- 核心模块-->
         <dependency>
             <groupId>com.ylkget</groupId>
             <artifactId>lc-framework</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ylkget</groupId>
+            <artifactId>lc-common</artifactId>
+        </dependency>
+
+        <!-- 代码生成-->
+        <dependency>
+            <groupId>com.ylkget</groupId>
+            <artifactId>lc-generator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
         </dependency>
     </dependencies>
 
