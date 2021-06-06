@@ -75,7 +75,6 @@ public class SysDeptController extends BaseController {
         return AjaxResult.success(deptService.selectDeptById(deptId));
     }
 
-    @ApiOperation("获取部门下拉树列表")
     @GetMapping("/treeselect")
     public AjaxResult treeselect(SysDept dept)
     {

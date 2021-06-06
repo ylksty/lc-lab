@@ -43,7 +43,6 @@ public class SysUserController extends BaseController {
     @Autowired
     private ISysPostService postService;
 
-    @ApiOperation("获取用户列表")
     @PreAuthorize("@ss.hasPermi('system:user:list')")
     @GetMapping("/list")
     public TableDataInfo list(SysUser user)

@@ -71,7 +71,8 @@ public class SwaggerConfiguration implements WebMvcConfigurer {
                 .securitySchemes(securitySchemes())
 
                 // 授权信息全局应用
-                .securityContexts(securityContexts());
+                .securityContexts(securityContexts())
+                .pathMapping(swaggerProperties.getPathMapping());
     }
 
     /**

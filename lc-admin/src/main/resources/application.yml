@@ -81,6 +81,8 @@ swagger:
   application-name: ${spring.application.name}
   application-version: 1.0.0
   application-description: springfox swagger 3.0整合 lc
+  # 请求前缀
+  path-mapping: /dev-api
 
 # 日志配置
 logging:

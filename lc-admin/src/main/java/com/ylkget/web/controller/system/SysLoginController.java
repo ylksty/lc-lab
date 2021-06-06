@@ -46,10 +46,6 @@ public class SysLoginController {
      * @return 结果
      */
     @PostMapping("/login")
-    @ApiOperation("login")
-    @ApiImplicitParams({
-        @ApiImplicitParam( name = "loginBody", dataType = "LoginBody")
-    })
     public AjaxResult login(@RequestBody LoginBody loginBody)
     {
         AjaxResult ajax = AjaxResult.success();
@@ -66,7 +62,6 @@ public class SysLoginController {
      * @return 用户信息
      */
     @GetMapping("getInfo")
-    @ApiOperation("getInfo")
     public AjaxResult getInfo()
     {
         LoginUser loginUser = tokenService.getLoginUser(ServletUtils.getRequest());

@@ -39,4 +39,9 @@ public class SwaggerProperties {
      * 接口调试地址
      */
     private String tryHost;
+
+    /**
+     * 请求前缀
+     **/
+    private String pathMapping;
 }

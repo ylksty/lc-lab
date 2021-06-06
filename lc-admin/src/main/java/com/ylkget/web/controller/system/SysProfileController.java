@@ -35,7 +35,6 @@ public class SysProfileController {
     @Autowired
     private ISysUserService userService;
 
-    @ApiOperation("个人信息")
     @GetMapping
     public AjaxResult profile()
     {
@@ -47,7 +46,6 @@ public class SysProfileController {
         return ajax;
     }
 
-    @ApiOperation("修改用户")
     @Log(title = "个人信息", businessType = BusinessType.UPDATE)
     @PutMapping
     public AjaxResult updateProfile(@RequestBody SysUser user)
@@ -66,7 +64,6 @@ public class SysProfileController {
         return AjaxResult.error("修改个人信息异常，请联系管理员");
     }
 
-    @ApiOperation("重置密码")
     @Log(title = "个人信息", businessType = BusinessType.UPDATE)
     @PutMapping("/updatePwd")
     public AjaxResult updatePwd(String oldPassword, String newPassword)
