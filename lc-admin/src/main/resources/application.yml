@@ -81,3 +81,13 @@ swagger:
   application-name: ${spring.application.name}
   application-version: 1.0.0
   application-description: springfox swagger 3.0整合 lc
+
+# 日志配置
+logging:
+  level:
+    com.ylkget: debug
+    org.springframework: warn
+    org:
+      mybatis:
+        spring:
+          mapper: debug
